@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu64"
+  config.vm.box = "ubuntu/trusty64"
   #config.vm.network "private_network", type: "dhcp"
   config.vm.synced_folder "./", "/vagrant"
 
