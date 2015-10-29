@@ -1,12 +1,9 @@
 #!/bin/bash
 
-sudo apt-get --yes update
+apt-get --yes update
+apt-get --yes install build-essential git
 
-sudo apt-get --yes install nodejs
-sudo apt-get --yes install npm
+apt-get --yes install npm
+# create symlink for 'node' as 'npm' is looking for 'node', not 'nodejs'
+ln -sf /usr/bin/nodejs /usr/bin/node
 
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
-
-sudo npm install -g yo generator-fed
